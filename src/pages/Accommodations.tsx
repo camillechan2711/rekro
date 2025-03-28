@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Input } from '@/components/ui/input';
@@ -121,7 +120,7 @@ const Accommodations = () => {
                           <SelectValue placeholder="Any" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="">Any</SelectItem>
+                          <SelectItem value="any">Any</SelectItem>
                           {bedroomOptions.map(option => (
                             <SelectItem key={option.id} value={option.value.toString()}>{option.label}</SelectItem>
                           ))}
@@ -136,7 +135,7 @@ const Accommodations = () => {
                           <SelectValue placeholder="Any" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="">Any</SelectItem>
+                          <SelectItem value="any">Any</SelectItem>
                           <SelectItem value="Cambridge">Cambridge</SelectItem>
                           <SelectItem value="Oxford">Oxford</SelectItem>
                           <SelectItem value="London">London</SelectItem>

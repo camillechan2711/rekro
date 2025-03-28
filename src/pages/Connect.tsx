@@ -60,7 +60,7 @@ const Connect = () => {
                 <SelectValue placeholder="University" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Universities</SelectItem>
+                <SelectItem value="all">All Universities</SelectItem>
                 {universities.map(uni => (
                   <SelectItem key={uni.id} value={uni.name}>{uni.name}</SelectItem>
                 ))}
@@ -72,7 +72,7 @@ const Connect = () => {
                 <SelectValue placeholder="Degree" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Degrees</SelectItem>
+                <SelectItem value="all">All Degrees</SelectItem>
                 {degrees.map(deg => (
                   <SelectItem key={deg.id} value={deg.name}>{deg.name}</SelectItem>
                 ))}
