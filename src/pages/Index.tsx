@@ -66,20 +66,20 @@ const Index = () => {
     <div className="app-container">
       <main className="main-content p-4">
         <div className="mb-8 animate-fadeIn">
-          <h1 className="font-bold gradient-heading mb-2 text-[183728] text-[#183829]">reKro</h1>
-          <p className="text-muted-foreground">Connect with students & find your perfect accommodation</p>
+          <h1 className="font-bold text-brand-800 mb-2 text-2xl">reKro</h1>
+          <p className="text-brand-400">Connect with students & find your perfect accommodation</p>
         </div>
         
         {/* Profile Section */}
         <div className="mb-8 animate-slideUp" style={{ animationDelay: '100ms' }}>
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-lg font-semibold">My Profile</h2>
+            <h2 className="text-lg font-semibold text-brand-800">My Profile</h2>
             {!editing ? (
               <Button 
                 variant="outline" 
                 size="sm" 
                 onClick={() => setEditing(true)}
-                className="flex items-center gap-1"
+                className="flex items-center gap-1 text-brand-400"
               >
                 <Edit size={16} /> Edit
               </Button>
@@ -87,7 +87,7 @@ const Index = () => {
               <Button 
                 size="sm" 
                 onClick={handleSaveProfile}
-                className="flex items-center gap-1 bg-brand-500 hover:bg-brand-600 text-white"
+                className="flex items-center gap-1 bg-brand-400 hover:bg-brand-500 text-white"
               >
                 <CheckCircle size={16} /> Save
               </Button>
@@ -103,31 +103,31 @@ const Index = () => {
                   className="w-14 h-14 rounded-full object-cover border-2 border-background"
                 />
                 {editing && (
-                  <button className="absolute bottom-0 right-0 p-1 bg-primary text-white rounded-full">
+                  <button className="absolute bottom-0 right-0 p-1 bg-brand-800 text-white rounded-full">
                     <Camera size={12} />
                   </button>
                 )}
               </div>
               <div>
-                <h2 className="text-lg font-semibold">{profile.name}</h2>
-                <p className="text-sm text-muted-foreground">
+                <h2 className="text-lg font-semibold text-brand-800">{profile.name}</h2>
+                <p className="text-sm text-brand-400">
                   {profile.university} • {profile.degree}, Year {profile.year}
                 </p>
               </div>
             </div>
             
             <div className="w-full bg-muted rounded-full h-2 mt-4 mb-2">
-              <div className="bg-brand-500 h-2 rounded-full" style={{
+              <div className="bg-brand-400 h-2 rounded-full" style={{
                 width: '75%'
               }}></div>
             </div>
-            <p className="text-xs text-right text-muted-foreground">Profile 75% complete</p>
+            <p className="text-xs text-right text-brand-400">Profile 75% complete</p>
           </div>
 
           {editing && (
             <div className="space-y-4 mb-6 animate-slideUp">
               <div>
-                <label className="text-sm font-medium mb-2 block">Name</label>
+                <label className="text-sm font-medium mb-2 block text-brand-800">Name</label>
                 <Input 
                   value={profile.name}
                   onChange={(e) => setProfile({ ...profile, name: e.target.value })}
@@ -136,7 +136,7 @@ const Index = () => {
               
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="text-sm font-medium mb-2 block">University</label>
+                  <label className="text-sm font-medium mb-2 block text-brand-800">University</label>
                   <Select 
                     value={profile.university} 
                     onValueChange={(value) => setProfile({ ...profile, university: value })}
@@ -153,7 +153,7 @@ const Index = () => {
                 </div>
                 
                 <div>
-                  <label className="text-sm font-medium mb-2 block">Degree</label>
+                  <label className="text-sm font-medium mb-2 block text-brand-800">Degree</label>
                   <Select 
                     value={profile.degree} 
                     onValueChange={(value) => setProfile({ ...profile, degree: value })}
@@ -171,7 +171,7 @@ const Index = () => {
               </div>
               
               <div>
-                <label className="text-sm font-medium mb-2 block">Year of Study</label>
+                <label className="text-sm font-medium mb-2 block text-brand-800">Year of Study</label>
                 <Select 
                   value={profile.year.toString()} 
                   onValueChange={(value) => setProfile({ ...profile, year: parseInt(value) })}
@@ -190,7 +190,7 @@ const Index = () => {
               </div>
               
               <div>
-                <label className="text-sm font-medium mb-2 block">Bio</label>
+                <label className="text-sm font-medium mb-2 block text-brand-800">Bio</label>
                 <Textarea 
                   value={profile.bio}
                   onChange={(e) => setProfile({ ...profile, bio: e.target.value })}
@@ -200,7 +200,7 @@ const Index = () => {
               </div>
               
               <div>
-                <label className="text-sm font-medium mb-2 block">Interests</label>
+                <label className="text-sm font-medium mb-2 block text-brand-800">Interests</label>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {profile.interests.map((interest, index) => (
                     <Badge key={index} variant="outline" className="bg-accent/50 flex items-center gap-1">
@@ -222,7 +222,7 @@ const Index = () => {
                   <Button 
                     onClick={handleAddInterest}
                     size="icon"
-                    className="bg-brand-500 hover:bg-brand-600 text-white"
+                    className="bg-brand-400 hover:bg-brand-500 text-white"
                   >
                     <PlusCircle size={18} />
                   </Button>
@@ -232,15 +232,15 @@ const Index = () => {
           )}
         </div>
         
-        {/* Liked Accommodations Section - This replaces the previous Connect/Find sections */}
+        {/* Liked Accommodations Section */}
         <div className="space-y-4 animate-slideUp" style={{ animationDelay: '200ms' }}>
           <div className="flex justify-between items-center mb-2">
-            <h2 className="text-lg font-semibold flex items-center gap-2">
-              <Heart size={20} className="text-rose-500" />
+            <h2 className="text-lg font-semibold flex items-center gap-2 text-brand-800">
+              <Heart size={20} className="text-accent1-400" />
               Liked Accommodations
             </h2>
             <Link to="/accommodations">
-              <Button variant="ghost" size="sm">View All</Button>
+              <Button variant="ghost" size="sm" className="text-brand-400">View All</Button>
             </Link>
           </div>
           
@@ -257,21 +257,21 @@ const Index = () => {
                       />
                     </div>
                     <div className="p-4 w-2/3">
-                      <h3 className="font-semibold text-base">{accommodation.title}</h3>
-                      <div className="flex items-center text-sm text-muted-foreground mt-1">
+                      <h3 className="font-semibold text-base text-brand-800">{accommodation.title}</h3>
+                      <div className="flex items-center text-sm text-brand-400 mt-1">
                         <Building size={14} className="mr-1" />
                         {accommodation.location}
                       </div>
-                      <p className="text-primary font-medium mt-2">{accommodation.price}</p>
+                      <p className="text-accent1-400 font-medium mt-2">{accommodation.price}</p>
                     </div>
                   </div>
                 </Card>
               ))}
             </div>
           ) : (
-            <div className="text-center py-8 text-muted-foreground">
+            <div className="text-center py-8 text-brand-400">
               <p>You haven't liked any accommodations yet.</p>
-              <Link to="/accommodations" className="text-primary hover:underline mt-2 inline-block">
+              <Link to="/accommodations" className="text-accent1-400 hover:underline mt-2 inline-block">
                 Browse Accommodations
               </Link>
             </div>

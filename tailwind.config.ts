@@ -63,30 +63,33 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				// Custom color scheme
 				brand: {
-					50: '#f5f3ff',
-					100: '#ede9fe',
-					200: '#ddd6fe',
-					300: '#c4b5fd',
-					400: '#a78bfa',
-					500: '#8b5cf6',
-					600: '#7c3aed',
-					700: '#6d28d9',
-					800: '#5b21b6',
-					900: '#4c1d95',
+					50: '#e6f2ed',
+					100: '#cce5db',
+					200: '#99cbb7',
+					300: '#66b194',
+					400: '#4da66e', // Subheadings on lighter background (HEX: 4da66e)
+					500: '#339766',
+					600: '#27704b',
+					700: '#1a4a31',
+					800: '#013927', // Main headings (HEX: 013927)
+					900: '#001a13',
 				},
 				accent1: {
-					50: '#e0f2fe',
-					100: '#bae6fd',
-					200: '#7dd3fc',
-					300: '#38bdf8',
-					400: '#0ea5e9',
-					500: '#0284c7',
-					600: '#0369a1',
-					700: '#075985',
-					800: '#0c4a6e',
-					900: '#082f49',
+					50: '#fffce6',
+					100: '#fef9cc',
+					200: '#fdf399',
+					300: '#fcec66',
+					400: '#fada45', // Highlight color (HEX: fada45)
+					500: '#f9d412',
+					600: '#c7a80f',
+					700: '#957f0b',
+					800: '#635508',
+					900: '#322a04',
 				},
+				customText: '#000000', // Body text (HEX: 000000)
+				customBg: '#ffffff', // Background (HEX: ffffff)
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
