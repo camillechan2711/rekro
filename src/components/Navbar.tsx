@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Users, Building, User } from 'lucide-react';
+import { Home, Users, Building } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Navbar = () => {
@@ -22,11 +22,6 @@ const Navbar = () => {
       path: '/accommodations',
       icon: Building,
       label: 'Housing'
-    },
-    {
-      path: '/profile',
-      icon: User,
-      label: 'Profile'
     }
   ];
 
